@@ -10,6 +10,10 @@ TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+if DEBUG:
+    print "SETTINGS_DIR = %s" % SETTINGS_DIR
+    print "PROJECT_PATH = %s" % PROJECT_PATH
+    print "TEMPLATE_PATH= %s" % TEMPLATE_PATH
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
