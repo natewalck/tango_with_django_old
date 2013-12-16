@@ -17,3 +17,10 @@ urlpatterns = patterns('',
     url(r'^rango/', include('rango.urls')), # ADD THIS NEW TUPLE!
 
 )
+
+if settings.DEBUG:
+    urlpatterns += patterns(
+        'django.views.static',
+        (r'media/(?P<path>.*)',
+        'serve',
+        {'document_root': settings.MEDIA_ROOT}), )
